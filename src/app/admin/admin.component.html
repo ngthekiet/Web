@@ -1,0 +1,284 @@
+<div class="container" *ngIf="user">
+  <div class="note">
+    Note*: Cần xóa dữ liệu cữ trước khi tải dữ liệu mới!!!
+  </div>
+  <div class="status" *ngIf="status!=null">
+    Status: {{status}}
+  </div>
+  <hr>
+  <div class="admin-list">
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý trang chủ
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[1]"
+                (click)="createData('https://vnexpress.net/rss/tin-moi-nhat.rss','home',1,2)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[2]"
+                (click)="deleteData('home',1,2)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý thời sự
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[3]"
+                (click)="createData('https://vnexpress.net/rss/thoi-su.rss','thoisu',3,4)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[4]"
+                (click)="deleteData('thoisu',3,4)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý thế giới
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[5]"
+                (click)="createData('https://vnexpress.net/rss/the-gioi.rss','thegioi',5,6)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[6]"
+                (click)="deleteData('thegioi',5,6)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý kinh doanh
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[7]"
+                (click)="createData('https://vnexpress.net/rss/kinh-doanh.rss','kinhdoanh',7,8)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[8]"
+                (click)="deleteData('kinhdoanh',7,8)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý khoa học
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[9]"
+                (click)="createData('https://vnexpress.net/rss/khoa-hoc.rss','khoahoc',9,10)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[10]"
+                (click)="deleteData('khoahoc',9,10)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý giải trí
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[11]"
+                (click)="createData('https://vnexpress.net/rss/giai-tri.rss','giaitri',11,12)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[12]"
+                (click)="deleteData('giaitri',11,12)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý thể thao
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[13]"
+                (click)="createData('https://vnexpress.net/rss/the-thao.rss','thethao',13,14)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[14]"
+                (click)="deleteData('thethao',13,14)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý pháp luật
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[15]"
+                (click)="createData('https://vnexpress.net/rss/phap-luat.rss','phapluat',15,16)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[16]"
+                (click)="deleteData('phapluat',15,16)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý giáo dục
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[17]"
+                (click)="createData('https://vnexpress.net/rss/giao-duc.rss','giaoduc',17,18)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[18]"
+                (click)="deleteData('giaoduc',17,18)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý sức khỏe
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[19]"
+                (click)="createData('https://vnexpress.net/rss/suc-khoe.rss','suckhoe',19,20)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[20]"
+                (click)="deleteData('suckhoe',19,20)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý đời sống
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[21]"
+                (click)="createData('https://vnexpress.net/rss/gia-dinh.rss','doisong',21,22)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[22]"
+                (click)="deleteData('doisong',21,22)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý du lịch
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[23]"
+                (click)="createData('https://vnexpress.net/rss/du-lich.rss','dulich',23,24)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[24]"
+                (click)="deleteData('dulich',23,24)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý số hóa
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[25]"
+                (click)="createData('https://vnexpress.net/rss/so-hoa.rss','sohoa',25,26)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[26]"
+                (click)="deleteData('sohoa',25,26)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý xe
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[27]"
+                (click)="createData('https://vnexpress.net/rss/oto-xe-may.rss','xe',27,28)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[28]"
+                (click)="deleteData('xe',27,28)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="admin-item">
+      <div class="admin-title">
+        Quản lý ý kiến
+      </div>
+      <div class="admin-feature">
+        <button [disabled]="done[29]"
+                (click)="createData('https://vnexpress.net/rss/y-kien.rss','ykien',29,30)">
+          <i class="fa-solid fa-download"></i>
+          Download
+        </button>
+        <button [disabled]="done[30]"
+                (click)="deleteData('ykien',29,30)">
+          <i class="fas fa-trash"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div class="container" *ngIf="!user">
+  <h3 style="text-align: center">Không có quyền truy cập</h3>
+</div>
